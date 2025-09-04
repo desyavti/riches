@@ -1,0 +1,20 @@
+name: Run Shell Script
+
+on:
+  push:
+    branches:
+      - main   # trigger saat push ke branch main
+  workflow_dispatch: # bisa manual trigger dari GitHub
+
+jobs:
+  run-script:
+    runs-on: self-hosted   # pakai runner Linux RHEL yang kamu install
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Jalankan shell script
+        run: |
+          chmod +x script.sh
+          ./script.sh
+        shell: bash
