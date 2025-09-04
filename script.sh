@@ -1,22 +1,17 @@
 #!/bin/bash
-# script.sh
-# Contoh script sederhana untuk RHEL self-hosted runner
+set -e
 
-set -e  # kalau ada error, langsung stop
+echo "=== Mulai menjalankan script.sh ==="
 
-echo "=== Mulai eksekusi script di $(hostname) ==="
-echo "Tanggal: $(date)"
-echo "User   : $(whoami)"
+# Contoh perintah awal (bisa ditambah sesuai kebutuhan kamu)
+echo "Menjalankan build/test dummy..."
+echo "Hello dari script.sh"
 
-# contoh perintah real: update paket & cek service
-echo "=== Update paket ==="
-sudo yum -y update
+# Jalankan ScanCentral
+echo "Menjalankan Fortify ScanCentral..."
+scancentral -url "http://10.100.34.250:8280/scancentral-ctrl/" start -upload \
+  -application "kejagung-demo" \
+  -version "v1" \
+  -uptoken 58af2e23-cebb-47f9-9e2f-35d76e98218b
 
-echo "=== Cek status Docker (jika ada) ==="
-if systemctl is-active --quiet docker; then
-  echo "Docker sedang berjalan"
-else
-  echo "Docker tidak berjalan"
-fi
-
-echo "=== Script selesai dengan sukses ==="
+echo "=== script.sh selesai ==="
