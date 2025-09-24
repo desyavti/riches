@@ -10,7 +10,7 @@ echo "Hello dari script.sh"
 # Jalankan ScanCentral
 echo "Menjalankan Fortify ScanCentral..."
 scancentral -url "http://10.100.34.250:8280/scancentral-ctrl/" start -upload \
-  -application "kejagung-demo" \
+  -application "aop-sample-sast" \
   -version "v1" \
   -uptoken 58af2e23-cebb-47f9-9e2f-35d76e98218b
 
