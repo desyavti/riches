@@ -3,7 +3,7 @@ set -e
 
 echo "=== Mulai menjalankan script.sh ==="
 
-# Contoh perintah awal (bisa ditambah sesuai kebutuhan kamu)
+# Contoh perintah awal
 echo "Menjalankan build/test dummy..."
 
 # Jalankan ScanCentral
