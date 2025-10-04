@@ -1,0 +1,24 @@
+sudo nano /etc/systemd/system/github-runner.service
+
+[Unit]
+Description=GitHub Actions Runner
+After=network.target
+
+[Service]
+ExecStart=/home/admin/Downloads/actions-runner/run.sh
+WorkingDirectory=/home/admin/Downloads/actions-runner
+User=admin
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+sudo systemctl daemon-reload
+sudo systemctl enable github-runner
+sudo systemctl start github-runner
+
+#untuk lihat log
+journalctl -u github-runner -f
