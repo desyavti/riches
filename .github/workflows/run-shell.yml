@@ -15,6 +15,7 @@ jobs:
 
       - name: Jalankan shell script
         run: |
+          scancentral
           chmod +x sast-trigger-only.sh
           ./sast-trigger-only.sh
         shell: bash
