@@ -74,7 +74,7 @@ echo "Medium: $medium"
 echo "Low: $low"
 echo "Total Issue Count: $total_issue"
 
-echo "Untuk detail vulnerability dapat dilihat pada: $SSC_URL/html/ssc/version/$pvId/audit"
+echo "Untuk detail vulnerability dapat dilihat pada: https://fortify.kikoichi.dev/ssc/html/ssc/version/$pvId/audit"
 
 if [[ "$critical" -gt 100 ]]; then
       echo "ERROR: Jumlah isu Critical ($critical) melebihi batas! Pipeline dihentikan."
