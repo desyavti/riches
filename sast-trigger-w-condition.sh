@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Jalankan perintah scancentral dan tangkap outputnya
+# Jalankan perintah scancentral dan tangkap outputnyaa
 output=$(scancentral -url "http://10.100.34.250:8280/scancentral-ctrl/" start -upload -bt none -application "riches" -version "1.0" -uptoken 58af2e23-cebb-47f9-9e2f-35d76e98218b 2>&1)
 
 # Tampilkan seluruh output untuk debugging
