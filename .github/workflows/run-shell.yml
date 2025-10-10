@@ -16,5 +16,7 @@ jobs:
       - name: Jalankan shell script
         run: |
           chmod +x sast-trigger-only.sh
+          chmod +x sast-trigger-w-condition.sh
           ./sast-trigger-only.sh
+          ./sast-trigger-w-condition.sh
         shell: bash
